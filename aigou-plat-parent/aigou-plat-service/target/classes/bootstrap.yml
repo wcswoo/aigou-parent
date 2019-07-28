@@ -4,8 +4,11 @@ eureka:
       defaultZone: http://localhost:1000/eureka/ #注册中心路径
   instance:
     prefer-ip-address: true #使用ip注册到eureka服务列表
-server:
-  port: 5000
 spring:
-  application:
-    name: plat-service
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: SPRING-CLOUD-CONFIG-SERVER
+      name: application-plat
+      profile: dev
