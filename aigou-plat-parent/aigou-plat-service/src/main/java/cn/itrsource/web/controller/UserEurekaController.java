@@ -21,10 +21,8 @@ public class UserEurekaController {
         String username=user.getUsername();
         String password=user.getPassword();
         if("admin".equals(username)&&"admin".equals(password)){
-            return AjaxResult.getAjax().setMessage("登陆成功").setSuccess(true);
+            return AjaxResult.getAjax().setMessage("登陆成功").setSuccess(true).setRestObj(user);
         }
         return  AjaxResult.getAjax().setSuccess(false).setMessage("登陆失败请重试！！");
     }
-
-
 }

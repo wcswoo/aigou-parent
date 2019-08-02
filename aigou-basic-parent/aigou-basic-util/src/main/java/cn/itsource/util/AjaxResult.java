@@ -1,26 +1,26 @@
 package cn.itsource.util;
 
 public class AjaxResult {
-    private  Boolean success;
-    private String message;
+    private  Boolean success=true;
+    private String message="操作成功";
     private Integer errorCode;
-    private Object resultObj;
+    private Object restObj;
     public AjaxResult() {
     }
 
-    public AjaxResult(Boolean success, String message, Integer errorCode, Object resultObj) {
+    public AjaxResult(Boolean success, String message, Integer errorCode, Object restObj) {
         this.success = success;
         this.message = message;
         this.errorCode = errorCode;
-        this.resultObj = resultObj;
+        this.restObj = restObj;
     }
 
-    public Object getResultObj() {
-        return resultObj;
+    public Object getRestObj() {
+        return restObj;
     }
 
-    public AjaxResult setResultObj(Object resultObj) {
-        this.resultObj = resultObj;
+    public AjaxResult setRestObj(Object restObj) {
+        this.restObj = restObj;
         return this;
     }
 
