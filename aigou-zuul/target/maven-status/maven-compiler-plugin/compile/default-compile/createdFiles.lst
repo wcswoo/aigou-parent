@@ -1,4 +1,4 @@
-cn\itsource\swaggeronfig\DocumentationConfig.class
-cn\itsource\swaggeronfig\SwaggerConfig.class
-cn\itsource\swaggeronfig\GlobalCorsConfig.class
-cn\itsource\ZuulApplication4399.class
+cn\itsource\commons\swaggeronfig\DocumentationConfig.class
+cn\itsource\commons\swaggeronfig\GlobalCorsConfig.class
+cn\itsource\commons\ZuulApplication4399.class
+cn\itsource\commons\swaggeronfig\SwaggerConfig.class

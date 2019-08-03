@@ -2,7 +2,7 @@ package cn.itsource.aigou.service;
 
 import cn.itsource.aigou.domain.Brand;
 import cn.itsource.aigou.query.BrandQuery;
-import cn.itsource.util.PageList;
+import cn.itsource.basic.util.PageList;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

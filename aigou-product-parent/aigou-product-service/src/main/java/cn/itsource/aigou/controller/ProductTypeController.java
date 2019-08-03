@@ -3,8 +3,8 @@ package cn.itsource.aigou.controller;
 import cn.itsource.aigou.domain.ProductType;
 import cn.itsource.aigou.query.ProductTypeQuery;
 import cn.itsource.aigou.service.IProductTypeService;
-import cn.itsource.util.AjaxResult;
-import cn.itsource.util.PageList;
+import cn.itsource.basic.util.AjaxResult;
+import cn.itsource.basic.util.PageList;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,11 +18,7 @@ public class ProductTypeController {
     @Autowired
     public IProductTypeService productTypeService;
 
-    /**
-    * 保存和修改公用的
-    * @param productType  传递的实体
-    * @return Ajaxresult转换结果
-    */
+
     @RequestMapping(value="/add",method= RequestMethod.POST)
     public AjaxResult save(@RequestBody ProductType productType){
         try {
@@ -84,5 +80,16 @@ public class ProductTypeController {
     {
         IPage<ProductType> page = productTypeService.page(new Page<ProductType>(query.getPageNum(),query.getPageSize()));
         return new PageList<>(page.getTotal(),page.getRecords());
+    }
+
+    @GetMapping("/genHomePage")
+    public AjaxResult genHomePage(){
+        try {
+            productTypeService.genHomePage();
+            return AjaxResult.getAjax().setSuccess(true).setMessage("成功！");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return AjaxResult.getAjax().setSuccess(false).setMessage("失败！"+e.getMessage());
+        }
     }
 }

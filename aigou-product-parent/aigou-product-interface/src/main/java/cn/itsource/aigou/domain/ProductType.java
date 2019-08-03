@@ -6,7 +6,6 @@ import com.baomidou.mybatisplus.extension.activerecord.Model;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -36,7 +35,7 @@ public class ProductType extends Model<ProductType> {
      */
     private String name;
     @TableField(exist = false)
-    private List<ProductType> children =new ArrayList<>();
+    private List<ProductType> children;
 
     public static long getSerialVersionUID() {
         return serialVersionUID;

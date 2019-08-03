@@ -1,5 +1,6 @@
 package cn.itsource.aigou.query;
-import cn.itsource.util.BaseQuery;
+
+import cn.itsource.basic.util.BaseQuery;
 
 /**
  *

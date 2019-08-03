@@ -1,8 +1,8 @@
 package cn.itrsource.web.controller;
 
 
+import cn.itsource.basic.util.AjaxResult;
 import cn.itsource.domain.User;
-import cn.itsource.util.AjaxResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
