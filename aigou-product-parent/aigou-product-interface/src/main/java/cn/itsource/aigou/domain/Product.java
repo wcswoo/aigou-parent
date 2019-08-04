@@ -1,11 +1,10 @@
 package cn.itsource.aigou.domain;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
-
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
 
 /**
@@ -14,7 +13,7 @@ import java.io.Serializable;
  * </p>
  *
  * @author wcswoo
- * @since 2019-07-30
+ * @since 2019-08-04
  */
 @TableName("t_product")
 public class Product extends Model<Product> {

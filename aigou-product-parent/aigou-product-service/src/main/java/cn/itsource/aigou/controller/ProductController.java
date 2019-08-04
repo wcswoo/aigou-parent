@@ -31,10 +31,10 @@ public class ProductController {
             }else{
                 productService.save(product);
             }
-            return AjaxResult.getAjax();
+            return AjaxResult.me();
         } catch (Exception e) {
             e.printStackTrace();
-            return AjaxResult.getAjax().setMessage("保存对象失败！"+e.getMessage());
+            return AjaxResult.me().setMessage("保存对象失败！"+e.getMessage());
         }
     }
 
@@ -47,10 +47,10 @@ public class ProductController {
     public AjaxResult delete(@PathVariable("id") Integer id){
         try {
             productService.removeById(id);
-            return AjaxResult.getAjax();
+            return AjaxResult.me();
         } catch (Exception e) {
         e.printStackTrace();
-            return AjaxResult.getAjax().setMessage("删除对象失败！"+e.getMessage());
+            return AjaxResult.me().setMessage("删除对象失败！"+e.getMessage());
         }
     }
 

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author wcswoo
- * @since 2019-07-30
+ * @since 2019-08-04
  */
 @Service
 public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> implements IProductService {
